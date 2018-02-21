@@ -40,12 +40,23 @@ class App extends Component {
   }
 
   render() {
+    const style = {
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
+    };
+
     return (
       <div className="App">
         <h1>Hi, I am a React App</h1>
         <p>Test</p>
         {/* Use bind to pass parameters to the function */}
-        <button onClick={ this.switchNameHandler.bind(this, 'Jono') }>Switch names</button>
+        <button
+          onClick={this.switchNameHandler.bind(this, 'Jono') }
+          style={style}
+        >Switch names</button>
         {/* <Person name="Jon" age="32">My Hobbies: Le Racing</Person>
         <Person name="Meng" age="30"/> */}
         {/* Another way to pass parameters to the function would be using an ES6 arrow function. Bind is the preferred method though (TODO: Google why) */}

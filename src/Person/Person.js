@@ -1,4 +1,5 @@
 import React  from 'react';
+import './Person.css';
 
 
 /**
@@ -10,7 +11,7 @@ const person = (props) => {
   // return <p>I am {props.name} and I am {props.age} years old.</p>
   return (
     // Methods can be passed as props
-    <div onClick={props.switch ? props.switch : null}>
+    <div className="person" onClick={props.switch}>
       <p>I am {props.name} and I am {props.age} years old.</p>
       {/* props.children is a reserverd word, and it yields whatever is in between the opening
       and closing html tags */}
